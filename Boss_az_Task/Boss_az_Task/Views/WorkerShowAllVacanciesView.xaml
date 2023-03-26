@@ -1,0 +1,28 @@
+﻿<Page x:Class="Boss_az_Task.Views.WorkerShowAllVacanciesView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Boss_az_Task.Views" 
+      xmlns:local1="clr-namespace:Boss_az_Task.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="WorkerShowAllVacanciesView">
+
+    <Page.DataContext>
+        <local1:WorkerCreateCvViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <ListBox ItemsSource="{Binding Vacancies}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}"/>
+                        <TextBlock Text="{Binding Title}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+    
+</Page>

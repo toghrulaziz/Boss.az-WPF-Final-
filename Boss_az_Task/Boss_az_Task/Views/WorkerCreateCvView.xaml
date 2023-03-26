@@ -1,0 +1,54 @@
+﻿<Page x:Class="Boss_az_Task.Views.WorkerCreateCvView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Boss_az_Task.Views" 
+      xmlns:local1="clr-namespace:Boss_az_Task.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="WorkerCreateCvView">
+    <Page.DataContext>
+        <local1:WorkerCreateCvViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Speciality:"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="50,10" Text="{Binding WorkerCreateCvtxtSpeciality}"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="University:"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="50,10" Text="{Binding WorkerCreateCvtxtUniversity}"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Skills:"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="50,10" Text="{Binding WorkerCreateCvtxtSkills}"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Companies:"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="50,10" Text="{Binding WorkerCreateCvtxtCompanies}"/>
+
+        <Label Grid.Row="4" Grid.Column="0" Content="Languages:"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Margin="50,10" Text="{Binding WorkerCreateCvtxtLanguages}"/>
+
+        <Label Grid.Row="5" Grid.Column="0" Content="GitLink:"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Margin="50,10" Text="{Binding WorkerCreateCvtxtGitLink}"/>
+
+        <Label Grid.Row="6" Grid.Column="0" Content="Linkedin:"/>
+        <TextBox Grid.Row="6" Grid.Column="1" Margin="50,10" Text="{Binding WorkerCreateCvtxtLinkedin}"/>
+
+        <Button Content="Ok" Grid.Row="7" Grid.Column="1" Background="DarkGreen" Height="50" Width="200" Command="{Binding WorkerCreateCvOkCommand}"/>
+    </Grid>
+</Page>
